@@ -1,0 +1,4 @@
+#id     {position:relative; height:115px;
+}
+#logo   {position:relative; height:105px;width:600px;
+}

@@ -1,9 +1,18 @@
 Project2::Application.routes.draw do
   resources :bookmarks
   resources :pages
-  root                :to => 'pages#home'
-  match   '/new',     :to => 'bookmarks#new'
-  match   '/index',   :to => 'bookmarks#index'
+  root                  :to => 'pages#home'
+  match   '/signup',    :to => 'pages#signup'
+  match   '/questions', :to => 'pages#questions'
+  match   '/about',     :to => 'pages#about'
+  match   '/contact',   :to => 'pages#contact'
+  
+  match   '/new',       :to => 'bookmarks#new'
+  match   '/index',     :to => 'bookmarks#index'
+  match   '/delete',    :to => 'bookmarks#delete'
+  match   '/show',      :to => 'bookmarks#show'
+  match   '/home' ,     :to => 'bookmarks#home'
+  
   
   # The priority is based upon order of creation:
   # first created -> highest priority.

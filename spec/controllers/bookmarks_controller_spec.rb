@@ -1,6 +1,7 @@
 require 'spec_helper'
 
 describe BookmarksController do
+  render_views
 
   describe "GET 'new'" do
     it "should be successful" do
