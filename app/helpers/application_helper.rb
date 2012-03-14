@@ -9,4 +9,8 @@ module ApplicationHelper
     "#{@title}"
     end
   end
+  
+  def logo
+    image_tag("book_logo.jpg", :alt=> "Bookmarks Project", :class => "round", :id =>"logo")
+  end
 end

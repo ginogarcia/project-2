@@ -1,8 +1,8 @@
-  <%= image_tag("book_logo.jpg", :alt=> "Bookmarks Project", :class => "round", :id =>"logo") %>
+  <%= link_to logo, root_path  %>
   <nav class='links round '>
     <ul>
-      <li><%= link_to 'Home', '#' %></li>
-      <li><%= link_to 'Sign in', '#' %></li>
-      <li><%= link_to 'Help', '#' %></li>
+      <li><%= link_to 'Home', root_path %></li>
+      <li><%= link_to 'Sign in', signup_path %></li>
+      <li><%= link_to 'Contact', contact_path %></li>
     </ul>
    </nav>

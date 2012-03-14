@@ -16,7 +16,7 @@ class PagesController < ApplicationController
   end
 
   def questions
-    @title = 'Frequently Asked Questions & Answers'
+    @title = "Frequently Asked Questions & Answers"
   end
 
 end
