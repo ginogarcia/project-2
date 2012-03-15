@@ -18,5 +18,9 @@ class UsersController < ApplicationController
   def questions
     @title = "Frequently Asked Questions & Answers"
   end
+  
+  def login
+       @user = User.new
+  end
 
 end
