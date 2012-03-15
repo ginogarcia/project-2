@@ -2,14 +2,20 @@ Project2::Application.routes.draw do
   resources :bookmarks
   resources :users
   resources :pages
+  resources :users_sessions
+  
+  
   root                  :to => 'pages#home'
   match   '/help',      :to => 'pages#help'
   match   '/search',    :to => 'pages#search'
+  
+  match   'users_sessions/new', :to => 'users_sessions#new'
   
   match   '/new',       :to => 'users#new'
   match   '/index',     :to => 'users#index'
   match   '/edit',      :to => 'users#edit'
   match   '/show',      :to => 'users#show'
+
 
   
  
