@@ -5,7 +5,7 @@ Project2::Application.routes.draw do
   resources :users_sessions
   
   
-  root                  :to => 'pages#home'
+  root                  :to => 'users_sessions#new'
   match   '/help',      :to => 'pages#help'
   match   '/search',    :to => 'pages#search'
   
