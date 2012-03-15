@@ -1,4 +1,4 @@
-class PagesController < ApplicationController
+class UsersController < ApplicationController
   def home
     @title = 'Ruby on Rails Bookmarks App'
   end

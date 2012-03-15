@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe PagesController do
+describe UsersController do
   render_views
 
 
