@@ -1,6 +1,7 @@
 class UsersController < ApplicationController
-  def home
-    @title = 'Ruby on Rails Bookmarks App'
+   def new
+       @user = User.new
+       @title = 'Ruby on Rails Bookmarks App'
   end
 
   def signup
@@ -19,8 +20,6 @@ class UsersController < ApplicationController
     @title = "Frequently Asked Questions & Answers"
   end
   
-  def login
-       @user = User.new
-  end
+ 
 
 end

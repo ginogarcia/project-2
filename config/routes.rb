@@ -1,12 +1,12 @@
 Project2::Application.routes.draw do
    resources :bookmarks
   resources :users
-  root                  :to => 'users#home'
+  root                  :to => 'users#new'
   match   '/signup',    :to => 'users#signup'
   match   '/questions', :to => 'users#questions'
   match   '/about',     :to => 'users#about'
   match   '/contact',   :to => 'users#contact'
-  
+ 
   match   '/new',       :to => 'bookmarks#new'
   match   '/index',     :to => 'bookmarks#index'
   match   '/delete',    :to => 'bookmarks#delete'
