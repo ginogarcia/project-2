@@ -2,8 +2,18 @@ require 'spec_helper'
 
 describe UsersController do
   render_views
+  
+   describe "GET 'home'" do
+    it "should be successful" do
+      get 'home'
+      response.should be_success
+    end
 
-
+    it "should have the right title" do
+      get 'home'
+      response.should have_selector("title", :content => "#{@title}")
+    end
+  end
 
   describe "GET 'new'" do
     it "should be successful" do
@@ -13,7 +23,7 @@ describe UsersController do
 
     it "should have the right title" do
       get 'new'
-        response.should have_selector("title", :content => "#{@title}")
+      response.should have_selector("title", :content => "#{@title}")
     end
   end
   
@@ -41,26 +51,26 @@ describe UsersController do
     end
   end
 
-  describe "GET 'about'" do
+  describe "GET 'search'" do
     it "should be successful" do
-      get 'about'
+      get 'search'
       response.should be_success
     end
     
     it "should have the right title" do
-      get 'about'
+      get 'search'
         response.should have_selector("title", :content => "#{@base_title}")
     end
   end
 
-  describe "GET 'questions'" do
+  describe "GET 'help'" do
     it "should be successful" do
-      get 'questions'
+      get 'help'
       response.should be_success
     end
     
     it "should have the right title" do
-      get 'questions'
+      get 'help'
         response.should have_selector("title", :content => "#{@base_title}")
     end
   end

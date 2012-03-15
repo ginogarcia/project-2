@@ -1,8 +1,18 @@
 class UsersController < ApplicationController
+  def home
+    @title =  'Ruby on Rails Bookmarks App'
+  end
+  
    def new
        @user = User.new
-       @title = 'Ruby on Rails Bookmarks App'
+       @title = 'Ruby on Rails New User'
+       
+    respond_to do |format|
+      format.html # new.html.erb
+      format.xml  { render :xml => @bookmark }
+    end
   end
+
 
   def signup
     @title = 'Bookmarks signup page'
@@ -12,12 +22,12 @@ class UsersController < ApplicationController
     @title = 'Contact Us page'
   end
 
-  def about
-    @title = 'About Us Page'
+  def help
+    @title = 'Help'
   end
 
-  def questions
-    @title = "Frequently Asked Questions & Answers"
+  def search
+    @title = "Search Us"
   end
   
  
