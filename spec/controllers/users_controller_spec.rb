@@ -1,9 +1,19 @@
 require 'spec_helper'
 
 describe UsersController do
+  
+  def valid_attributes
+    {}
+  end
   render_views
 
-  
+    describe "GET index" do
+    it "assigns all users as @users" do
+      user = User.create! valid_attributes
+      get :index
+      assigns(:users).should eq([user])
+    end
+  end
   
   describe "GET 'edit'" do
     it "should be successful" do
@@ -12,12 +22,7 @@ describe UsersController do
     end
   end
 
-  describe "GET 'index'" do
-    it "should be successful" do
-      get 'index'
-      response.should be_success
-    end
-  end
+ 
 
   describe "GET 'show'" do
     it "should be successful" do
