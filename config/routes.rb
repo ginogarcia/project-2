@@ -1,12 +1,6 @@
 Project2::Application.routes.draw do
-  get "new/edit"
-
-  get "new/index"
-
-  get "new/show"
-
   resources :bookmarks
-  #resources :users
+  resources :users
   #root                  :to => 'users#home'
   #match   '/signup',    :to => 'users#signup'
   #match   '/help',      :to => 'users#help'

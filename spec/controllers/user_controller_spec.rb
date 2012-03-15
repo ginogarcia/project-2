@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe NewController do
+describe UserController do
 
   describe "GET 'edit'" do
     it "should be successful" do
