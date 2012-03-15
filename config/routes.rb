@@ -6,10 +6,11 @@ Project2::Application.routes.draw do
   match   '/help',      :to => 'pages#help'
   match   '/search',    :to => 'pages#search'
   
-  match   '/show',      :to => 'users#show'
   match   '/new',       :to => 'users#new'
-  match   '/edit',      :to => 'users#edit'
   match   '/index',     :to => 'users#index'
+  match   '/edit',      :to => 'users#edit'
+  match   '/show',      :to => 'users#show'
+
   
  
   match   '/new',       :to => 'bookmarks#new'
