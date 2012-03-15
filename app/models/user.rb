@@ -12,5 +12,5 @@
 #
 
 class User < ActiveRecord::Base
-  attr_accessible :username, :realname, :email, :password
+  attr_accessible :id, :username, :realname, :email, :password
 end

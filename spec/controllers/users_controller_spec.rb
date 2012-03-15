@@ -3,7 +3,20 @@ require 'spec_helper'
 describe UsersController do
   render_views
   
-   describe "GET 'home'" do
+  def valid_attributes
+    {}
+  end
+
+  describe "GET index" do
+    it "assigns all users as @users" do
+      user = User.create! valid_attributes
+      get :index
+      assigns(:user).should eq([user])
+    end
+  end
+  
+  
+  describe "GET 'home'" do
     it "should be successful" do
       get 'home'
       response.should be_success

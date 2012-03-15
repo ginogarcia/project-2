@@ -7,6 +7,8 @@ Project2::Application.routes.draw do
   match   '/search',    :to => 'users#search'
   match   '/contact',   :to => 'users#contact'
   match   '/new',       :to => 'users#new'
+  match   '/edit',      :to => 'users#edit'
+  match   '/index',     :to => 'users#index'
   
  
   match   '/new',       :to => 'bookmarks#new'

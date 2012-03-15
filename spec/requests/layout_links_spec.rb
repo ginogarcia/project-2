@@ -1,6 +1,7 @@
 require 'spec_helper'
 
 describe "LayoutLinks" do
+  
    it "should have a Home page at '/'" do
     get '/'
     response.should have_selector('title', :content => "Ruby on Rails Bookmarks App")
@@ -11,6 +12,10 @@ describe "LayoutLinks" do
     response.should have_selector('title', :content => "Ruby on Rails Bookmarks App")
   end
   
+   it "should have an Edit page at '/edit'" do
+    get 'users/edit'
+    response.should have_selector('title', :content => "Edit Account")
+  end
   
   it "should have a Contat page at '/contact'" do
     get '/contact'

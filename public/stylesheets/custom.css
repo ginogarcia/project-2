@@ -63,3 +63,12 @@ footer           {text-align: center;
 
 footer nav       {float: none;}
 
+.right           {width:330px;float:right;
+                   text-align:center;
+}
+
+.left            {widht:330px; float:left;
+                  text-align:center;left:20px;
+}
+.button         {positon:relative;  text-align:center;}
+
