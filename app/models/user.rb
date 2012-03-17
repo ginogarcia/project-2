@@ -12,5 +12,14 @@
 #
 
 class User < ActiveRecord::Base
-  attr_accessible :id, :username, :realname, :email, :password
+  #attr_accessible  :username, :realname, :email, :password
+
+  #validates :username, presence => true
+  #validates :realname, presence => true
+  #validates :email, presence => true
+  #validates :password, presence => true
+
+  
+    
+
 end

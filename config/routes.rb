@@ -12,20 +12,13 @@ Project2::Application.routes.draw do
   match   'users_sessions/new', :to => 'users_sessions#new'
   
   match   '/new',       :to => 'users#new'
-  match   '/index',     :to => 'users#index'
-  match   '/edit',      :to => 'users#edit'
-  match   '/show',      :to => 'users#show'
-
-
-  
- 
-  match   '/new',       :to => 'bookmarks#new'
-  match   '/index',     :to => 'bookmarks#index'
-  match   '/delete',    :to => 'bookmarks#delete'
   match   '/show',      :to => 'bookmarks#show'
-  match   '/home' ,     :to => 'bookmarks#home'
   
-  
+  match   '/home',      :to => 'bookmarks#home'
+
+
+
+ 
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
