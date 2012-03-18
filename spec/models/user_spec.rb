@@ -1,3 +1,16 @@
+# == Schema Information
+#
+# Table name: users
+#
+#  id         :integer         not null, primary key
+#  username   :string(255)
+#  realname   :string(255)
+#  email      :string(255)
+#  password   :string(255)
+#  created_at :datetime
+#  updated_at :datetime
+#
+
 require 'spec_helper'
 
 describe User do
@@ -5,7 +18,8 @@ describe User do
     @attr = {:username => "ggarcia",
              :realname => "Gino Garcia",
              :email => "user@example.com",
-             :password => "X2020x20"}
+             :password => "X2020x20",
+             :password_confirmation => "X2020x20"}
    end
     
   it "should create a new instance given valid attributes" do
@@ -58,16 +72,32 @@ describe User do
   end  
        
        
-    
+  
+       
+  describe "password validations" do
+
     it "should require a password" do
-        no_password_user = User.new(@attr.merge(:password => ""))
-        no_password_user.should_not be_valid
+      User.new(@attr.merge(:password => "", :password_confirmation => "")).
+        should_not be_valid
     end
-       it "should reject passwords that are too long" do
-        long_name = "a" * 41
-        long_password_user = User.new(@attr.merge(:password => long_name))
-        long_password_user.should_not be_valid
-    end 
+
+    it "should require a matching password confirmation" do
+      User.new(@attr.merge(:password_confirmation => "invalid"))
+        should_not be_valid
+    end
+
+    it "should reject short passwords" do
+      short = "a" * 6
+      hash = @attr.merge(:password => short, :password_confirmation => short)
+      User.new(hash).should_not be_valid
+    end
+
+    it "should reject long passwords" do
+      long = "a" * 41
+      hash = @attr.merge(:password => long, :password_confirmation => long)
+      User.new(hash).should_not be_valid
+    end
+  end
     
    
    

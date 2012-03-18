@@ -17,8 +17,8 @@ Project2::Application.routes.draw do
   match   '/edit',      :to => 'users#edit'
   
   match   '/show',      :to => 'bookmarks#show'
-  
-  match   '/home',      :to => 'bookmarks#home'
+  match   '/index',   :to => 'bookmarks#index'
+
 
 
 
