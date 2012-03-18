@@ -27,7 +27,18 @@ describe BookmarksController do
        @attr = {:url => "http://gino-project1.heroku.com",:name => "Gino Garcia" }
     end
   #
+  
+  
+ 
+
   describe "GET index" do
+    it "should be successful" do
+      get 'index'
+      response.should be_success
+    end
+     
+   
+    
     it "assigns all bookmarks as @bookmarks" do
       bookmark = Bookmark.create! valid_attributes
       get :index

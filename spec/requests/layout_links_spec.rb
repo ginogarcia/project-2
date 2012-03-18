@@ -4,7 +4,7 @@ describe "LayoutLinks" do
   #
    it "should have a Home page at '/'" do
     get '/'
-    response.should have_selector('title', :content => "Ruby on Rails Bookmarks App")
+    response.should have_selector('title', :content => "Welcome to the Bookmarks project")
   end
   
   it "should have a New page at '/new'" do
