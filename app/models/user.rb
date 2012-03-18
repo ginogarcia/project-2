@@ -11,15 +11,28 @@
 #  updated_at :datetime
 #
 
+ 
 class User < ActiveRecord::Base
-  #attr_accessible  :username, :realname, :email, :password
-
-  #validates :username, presence => true
-  #validates :realname, presence => true
-  #validates :email, presence => true
-  #validates :password, presence => true
-
+  attr_accessible  :username, :realname, :email, :password
   
+  email_regex = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
+ 
+    validates :username, :presence => true,
+                     :uniqueness => true,
+                     :length => {:maximum => 100}
+    
+    validates :realname, :presence => true,
+                     :length => {:minimum => 2},
+                     :length => {:maximum => 75}
+                         
+   validates :email, :presence => true,
+                    :format   => { :with => email_regex }
+                    
+    validates :password, :presence => true,
+                     :length => {:minimum => 7},
+                     :length => {:maximum => 40}
+    
+    
     
 
 end
