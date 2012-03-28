@@ -66,5 +66,15 @@ class UsersController < ApplicationController
       format.xml  { head :ok }
     end
   end
-end
 
+  
+  def login
+    @title = "Login to the Bookmarks project"
+    @user = User.new
+  end
+    
+  
+  def logged
+    @user = User.new
+  end
+end

@@ -7,15 +7,15 @@ render_views
   end
 
 
- describe "GET 'home'" do
+ describe "GET 'search'" do
     it "should be successful" do
-      get 'home'
+      get 'search'
       response.should be_success
     end
 
     it "should have the right title" do
-      get 'home' 
-      response.should have_selector("title",:content => "Welcome to the Bookmarks project")
+      get 'search' 
+      response.should have_selector("title",:content => "Search to the Bookmarks project")
     end
   end
 
