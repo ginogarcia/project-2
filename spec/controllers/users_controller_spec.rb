@@ -28,9 +28,9 @@ describe UsersController do
       end
     end
   #
-      describe "GET new" do
+      describe "GET signup" do
         it "assigns a new user as @user" do
-          get :new
+          get :signup
           assigns(:user).should be_a_new(User)
         end
       end
@@ -74,7 +74,7 @@ describe UsersController do
         # Trigger the behavior that occurs when invalid params are submitted
         User.any_instance.stub(:save).and_return(false)
         post :create, :user => {}
-        response.should render_template("new")
+        response.should render_template("signup")
       end
     end
   end

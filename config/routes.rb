@@ -8,10 +8,10 @@ Project2::Application.routes.draw do
  
   match   '/help',      :to => 'pages#help'
   match   '/search',    :to => 'pages#search'
-  match   '/signup',    :to => 'pages#signup'
+
   
   
-  match   '/new',       :to => 'users#new'
+  match   '/signup',       :to => 'users#signup'
   match   '/edit',      :to => 'users#edit'
   match   '/logged',    :to => 'users#logged'
   match   '/index',     :to => 'users#index'

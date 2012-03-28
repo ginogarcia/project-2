@@ -13,8 +13,13 @@ class UsersController < ApplicationController
 
   # GET /users/new
   # GET /users/new.xml
+  
   def new
+    @user =User.new
+  end
+  def signup
     @user = User.new
+    @title = 'Bookmarks signup page'
   end
 
   # GET /users/1/edit
@@ -33,7 +38,7 @@ class UsersController < ApplicationController
         format.html { redirect_to(@user, :notice => 'User was successfully created.') }
         format.xml  { render :xml => @user, :status => :created, :location => @user }
       else
-        format.html { render :action => "new" }
+        format.html { render :action => "signup" }
         format.xml  { render :xml => @user.errors, :status => :unprocessable_entity }
       end
     end
